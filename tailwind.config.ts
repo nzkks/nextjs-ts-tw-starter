@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import plugin from 'tailwindcss/plugin';
 import { fontFamily } from 'tailwindcss/defaultTheme';
 
 const config: Config = {
@@ -26,6 +27,22 @@ const config: Config = {
     },
   },
   darkMode: 'class',
-  plugins: [],
+  plugins: [
+    plugin(({ matchUtilities, theme }) => {
+      matchUtilities(
+        {
+          'auto-fill': (value) => ({
+            gridTemplateColumns: `repeat(auto-fill, minmax(min(${value}, 100%), 1fr))`,
+          }),
+          'auto-fit': (value) => ({
+            gridTemplateColumns: `repeat(auto-fit, minmax(min(${value}, 100%), 1fr))`,
+          }),
+        },
+        {
+          values: theme('width', {}),
+        },
+      );
+    }),
+  ],
 };
 export default config;
