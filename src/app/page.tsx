@@ -7,8 +7,8 @@ const Home = () => {
     <main>
       <ThemeSwitch />
 
-      <p className="text-primary-900">Hello</p>
-      <Button className="bg-primary-900 font-bold text-primary-100">
+      <p className="text-primary">Hello</p>
+      <Button color="primary" className="font-bold text-white">
         Button
       </Button>
     </main>
