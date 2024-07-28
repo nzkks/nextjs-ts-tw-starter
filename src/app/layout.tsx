@@ -23,7 +23,7 @@ const RootLayout = ({
   children: ReactNode;
 }>) => {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${fontSans.variable} font-sans`}>
         <Providers>
           {children}
