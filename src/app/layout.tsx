@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Inter as FontSans } from 'next/font/google';
 
 import './globals.css';
+import { Providers } from '@/components';
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -23,7 +24,11 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={`${fontSans.variable} font-sans`}>{children}</body>
+      <body className={`${fontSans.variable} font-sans`}>
+        <Providers>
+          {children}
+        </Providers>
+        </body>
     </html>
   );
 };
