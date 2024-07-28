@@ -2,21 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 236, 240, 241;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-rgb: 0, 0, 0;
+    --foreground: 0, 0, 0;
+    --background: 236, 240, 241;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+  :root[data-theme~='dark'] {
+    --foreground: 255, 255, 255;
+    --background: 0, 0, 0;
+  }
 }
 
 @layer utilities {
