@@ -1,8 +1,14 @@
+import { ReactNode } from 'react';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter as FontSans } from 'next/font/google';
+
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const fontSans = FontSans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-sans',
+});
 
 export const metadata: Metadata = {
   title: 'Shanthosh Krishnakumar | Frontend Developer | React, Next.js, Animations | Auckland',
@@ -13,11 +19,11 @@ export const metadata: Metadata = {
 const RootLayout = ({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) => {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${fontSans.variable} font-sans`}>{children}</body>
     </html>
   );
 };
