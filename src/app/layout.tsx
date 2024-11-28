@@ -26,7 +26,7 @@ const RootLayout = ({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${fontSans.variable} bg-background text-foreground min-h-[100dvh] font-sans antialiased`}
+        className={`${fontSans.variable} min-h-[100dvh] bg-background font-sans text-foreground antialiased`}
       >
         <ThemeProvider
           attribute="class"
@@ -34,7 +34,7 @@ const RootLayout = ({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <main>{children}</main>
         </ThemeProvider>
       </body>
     </html>

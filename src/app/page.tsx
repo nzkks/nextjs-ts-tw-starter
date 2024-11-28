@@ -2,7 +2,7 @@ import { ThemeSwitch } from '@/components';
 
 const Home = () => {
   return (
-    <main>
+    <>
       <div className="mb-5 bg-primary">
         <p className="text-2xl text-primary-foreground">Hello</p>
         <button className="font-bold">Button</button>
@@ -12,7 +12,7 @@ const Home = () => {
         <button className="font-bold">Button</button>
       </div>
       <ThemeSwitch />
-    </main>
+    </>
   );
 };
 
