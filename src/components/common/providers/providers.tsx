@@ -17,7 +17,7 @@ const Providers = ({ children }: { children: ReactNode }) => {
         enableSystem
         disableTransitionOnChange
       >
-        <div className="bg-background text-foreground">{children}</div>
+        <main className="bg-background text-foreground">{children}</main>
       </ThemeProvider>
     </NextUIProvider>
   );
