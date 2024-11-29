@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Inter as FontSans } from 'next/font/google';
 
-import './globals.css';
+import '@/styles/globals.css';
 import { Providers } from '@/components';
 import { cn } from '@/lib/utils';
 
