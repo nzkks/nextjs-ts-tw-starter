@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Inter as FontSans } from 'next/font/google';
 
-import './globals.css';
+import '@/styles/globals.css';
 import { cn } from '@/lib/utils';
 import { ThemeProvider } from '@/components';
 
@@ -38,7 +38,7 @@ const RootLayout = ({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <main>{children}</main>
         </ThemeProvider>
       </body>
     </html>

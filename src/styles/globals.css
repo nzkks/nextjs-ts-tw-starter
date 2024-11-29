@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* .colour-preview {
+  color: hsl(222.2 84% 4.9%);
+} */
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -31,7 +35,7 @@
     --chart-5: 27 87% 67%;
   }
 
-  :root[class~='dark'] {
+  .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
@@ -59,8 +63,8 @@
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }
